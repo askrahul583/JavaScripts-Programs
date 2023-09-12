@@ -6,3 +6,4 @@ function rotate(arr, stepsToShift) {
 }
 
 console.log(rotate([1, 2, 5, 6, 7, 8], 3));
+
