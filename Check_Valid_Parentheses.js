@@ -27,3 +27,25 @@ function checkValidParantheses(input) {
 
 console.log(checkValidParantheses(input));
 // console.log(stack);
+
+const map = new Map([
+  ["{", "}"],
+  ["(", ")"],
+  ["[", "]"],
+]);
+
+var isValid = function (s) {
+  const stack = [];
+
+  for (let bracket of s) {
+    if (map.get(bracket)) {
+      stack.push(bracket);
+    } else {
+      const b = stack.pop();
+
+      if (map.get(b) !== bracket) return false;
+    }
+  }
+
+  return stack.length === 0;
+};
