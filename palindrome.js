@@ -14,4 +14,5 @@ function palindrome2(str) {
 }
 
 
-console.log(palindrome2("madam"));
+console.log(palindrome2("madam")); // m === m
+// a === a
